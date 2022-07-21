@@ -20,7 +20,7 @@
     "MongoDB server",
     "Cloudinary server"
   ],
-  "author": "Stephen Vaughan <stephen.a.vaughan@gmail.com>",
+  "author": "Stephen Vaughan",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.26.1",
