@@ -93,7 +93,7 @@ app.get('/403', (req, res, next) => {
 
 // Internal Server Error Handler
 app.get('/500', (req, res, next) => {
-    const err = new Error(messages.noAccess())
+    const err = new Error(messages.serverError())
     err.status = 500;
     next(err)
 })
@@ -106,13 +106,6 @@ app.use((req, res, next) => {
         json: () => res.json({ error: messages.notFoundJSON }),
         default: () => res.type('txt').send(messages.notFoundText)
     })
-})
-
-// CSRF Attack Handler
-app.use((err, req, res, next) => {
-    if (err.code !== "EBADCSRFTOKEN") return next(err)
-    res.status(403)
-    res.send(messages.csrfAttack())
 })
 
 app.use(errorHandler)
