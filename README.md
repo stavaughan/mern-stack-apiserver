@@ -1,2 +1,3 @@
-# mern-stack-apiserver
+# MERN Stack Proxy Server
+
 A rest API proxy server to server and provide CRUD functionality between a  React app and various cloud API services including MongoDB Atlas, Cloudinary, etc.
