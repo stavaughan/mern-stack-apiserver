@@ -17,7 +17,7 @@ const messages = {
     root:  () => messageWrapper('Please set to production.'),
 
     forbidden: () => messageWrapper('403 Forbidden'),
-
+    
     controllers: {
         users: {
             invalidLogin: 'The login credentials provided are invalid.',
@@ -37,7 +37,8 @@ const messages = {
             alreadyVerified: `You are already a verified user. Please click 'forgot password' at login, to change your password.`,
             notApprovedEmail: 'Access denied! The email entered is not on the approved list. Please contact application administrator to have your email placed on the list.',
             tempPWnoMatch: 'The temporary password you entered does not with the one sent to you!',
-            badServerNoUser: `Problem with server, user couldn't be created at this time`
+            badServerNoUser: `Problem with server, user couldn't be created at this time`,
+            missingAuthToken: 'No Access! No authorization token provided or wrong token sent.'
         },
         collections: {
             getItem: (id) => `Failed to fetch item!\nThe requested item, with id number ${id}, cannot be found.`,

@@ -5,8 +5,7 @@ import { protect } from '../middleware/authMiddleware.js'
 const {
     getInventoryImages,
     uploadInventoryImage,
-    uploadAvatarImage,
-    uploadBusLogo
+    uploadAvatarImage
 } = imagesController;
 
 const imagesRouter = express.Router();

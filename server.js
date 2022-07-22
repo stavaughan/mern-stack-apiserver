@@ -10,7 +10,6 @@ import messages from './utils/messages.js'
 import {
     usersRouter,
     standardRouter,
-    itemCollectionRouter,
     settingsRouter,
     imagesRouter,
     documentsRouter
@@ -54,19 +53,18 @@ app.use(cors(corsOptions))
     I created different routers to increase the readability of the code, while working on the larger project.
 */
 
+// MongoDB users collection
 app.use('/api/users', usersRouter)
 
 // MongoDB single document collections
-app.use('/api/owner', itemCollectionRouter)
-
-
 app.use('/api/settings', settingsRouter)
 
 // MongoDB multi document collections
-
 app.use('/api/accounts', standardRouter)
 app.use('/api/contacts', standardRouter)
 app.use('/api/vendors', standardRouter)
+app.use('/api/inventory', standardRouter)
+app.use('/api/documents', standardRouter)
 
 // Cloudinary images or whatever image hosting service you prefer
 app.use('/api/images', imagesRouter)
