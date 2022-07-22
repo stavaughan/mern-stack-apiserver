@@ -2,12 +2,11 @@ import mongoose from 'mongoose'
 
 const documentSchema = new mongoose.Schema(
     {
-        //TODO: change type to 'title' and 'title' to description
-        type: String,
         title: {
             type: String,
             required: [true, 'Please add a document title']
         },
+        description: String,
         group: String,
         file: {
             type: String,

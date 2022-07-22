@@ -4,9 +4,9 @@ import getters from '../../lib/getters.js'
 const websiteSchema = new mongoose.Schema(
     {
         type: String,
-        url: { 
-            type: String, 
-            set: getters.toLower 
+        url: {
+            type: String,
+            set: getters.toLower
         }
     }
 )

@@ -23,7 +23,7 @@ const cloudinaryControllers = {
                 public_id: pid,
                 folder
             });
-            res.json({ 
+            res.json({
                 msg: msgSuccess,
                 pid
             })

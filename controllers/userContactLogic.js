@@ -71,11 +71,11 @@ const userContactLogic = {
             // If contact exists add 'userRole' field, else create a new contact
             const contact = existingID
                 ? await Contact.findByIdAndUpdate(existingID, { userRole }, { new: true })
-                : await Contact.create({ 
-                    name, 
-                    fullName, 
-                    email, 
-                    userRole 
+                : await Contact.create({
+                    name,
+                    fullName,
+                    email,
+                    userRole
                 })
 
             const contactID = await contact._id;

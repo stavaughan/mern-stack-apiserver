@@ -12,6 +12,5 @@ const imagesRouter = express.Router();
 
 imagesRouter.route('/inventory').get(protect, getInventoryImages).post(protect, uploadInventoryImage)
 imagesRouter.route('/avatars').post(protect, uploadAvatarImage)
-imagesRouter.route('/logos').post(protect, uploadBusLogo)
 
 export default imagesRouter
